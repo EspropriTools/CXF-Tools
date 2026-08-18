@@ -1,0 +1,145 @@
+================================================================================
+CXF Tools v2.3.47
+Licenze di terze parti / Third-Party Licenses
+================================================================================
+
+Questo file elenca le librerie e le risorse di terze parti utilizzate da
+CXF Tools, insieme alle rispettive licenze.
+
+
+--------------------------------------------------------------------------------
+FONT
+--------------------------------------------------------------------------------
+
+Inter
+  Autore: Rasmus Andersson
+  Licenza: SIL Open Font License 1.1
+  Sorgente: https://github.com/rsms/inter
+  Il font è incluso localmente nell'applicazione.
+
+  Copyright 2020 The Inter Project Authors
+  (https://github.com/rsms/inter)
+
+  This Font Software is licensed under the SIL Open Font License, Version 1.1.
+  This license is available with a FAQ at: https://openfontlicense.org
+
+
+--------------------------------------------------------------------------------
+LIBRERIE PYTHON
+--------------------------------------------------------------------------------
+
+Eel
+  Licenza: MIT
+  Sorgente: https://github.com/python-eel/Eel
+
+  Copyright (c) 2018 Chris Knott
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+ezdxf
+  Licenza: MIT
+  Sorgente: https://github.com/mozman/ezdxf
+
+  Copyright (c) 2021 Manfred Moitzi
+  Licensed under the MIT License.
+
+geopandas
+  Licenza: BSD 3-Clause
+  Sorgente: https://github.com/geopandas/geopandas
+
+  Copyright (c) 2013-2024, GeoPandas developers
+  All rights reserved.
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions are met:
+  1. Redistributions of source code must retain the above copyright notice,
+     this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright notice,
+     this list of conditions and the following disclaimer in the documentation
+     and/or other materials provided with the distribution.
+  3. Neither the name of the copyright holder nor the names of its contributors
+     may be used to endorse or promote products derived from this software
+     without specific prior written permission.
+
+Shapely
+  Licenza: BSD 3-Clause
+  Sorgente: https://github.com/shapely/shapely
+
+  Copyright (c) 2007, Sean C. Gillies
+  All rights reserved.
+
+  NOTA: Shapely utilizza internamente la libreria GEOS (LGPL 2.1).
+  GEOS viene distribuita come libreria dinamica (.dll) separata,
+  nel rispetto dei termini della licenza LGPL 2.1.
+
+GEOS
+  Licenza: LGPL 2.1
+  Sorgente: https://github.com/libgeos/geos
+
+  Copyright (c) 2005-2024 GEOS contributors
+  GEOS is free software and is distributed under the GNU Lesser General
+  Public License (LGPL), version 2.1 or later.
+  https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
+
+pandas
+  Licenza: BSD 3-Clause
+  Sorgente: https://github.com/pandas-dev/pandas
+
+  Copyright (c) 2008-2024, AQR Capital Management, LLC,
+  Lambda Foundry, Inc. and PyData Development Team
+  All rights reserved.
+
+NumPy
+  Licenza: BSD 3-Clause
+  Sorgente: https://github.com/numpy/numpy
+
+  Copyright (c) 2005-2024, NumPy Developers
+  All rights reserved.
+
+pyproj
+  Licenza: MIT
+  Sorgente: https://github.com/pyproj4/pyproj
+
+  Copyright (c) 2006-2024, Jeffrey Whitaker
+  Licensed under the MIT License.
+
+requests
+  Licenza: Apache License 2.0
+  Sorgente: https://github.com/psf/requests
+
+  Copyright (c) 2019 Kenneth Reitz
+  Licensed under the Apache License, Version 2.0.
+  https://www.apache.org/licenses/LICENSE-2.0
+
+cryptography
+  Licenza: Apache License 2.0 / BSD 3-Clause (dual license)
+  Sorgente: https://github.com/pyca/cryptography
+
+  Copyright (c) Individual contributors
+  Licensed under the Apache License, Version 2.0 or BSD 3-Clause License.
+
+Fiona
+  Licenza: BSD 3-Clause
+  Sorgente: https://github.com/Toblerity/Fiona
+
+  Copyright (c) 2007, Sean C. Gillies
+  All rights reserved.
+
+
+--------------------------------------------------------------------------------
+NOTE
+--------------------------------------------------------------------------------
+
+Tutte le librerie sopra elencate sono distribuite con licenze permissive
+(MIT, BSD 3-Clause, Apache 2.0) compatibili con l'uso commerciale.
+
+La libreria GEOS (LGPL 2.1) è utilizzata come dipendenza dinamica di Shapely.
+In conformità con la licenza LGPL 2.1, GEOS viene distribuita come libreria
+condivisa (.dll) separata, consentendo all'utente la sostituzione con una
+versione compatibile.
