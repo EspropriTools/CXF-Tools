@@ -27,13 +27,11 @@ CXF Tools legge i file in formato **CXF** dell'Agenzia delle Entrate e li conver
 
 La conversione avviene **interamente sul tuo computer**. Nessun file viene caricato online, nessuna connessione a Internet è richiesta.
 
-<img width="1772" height="1263" alt="schermata-principale (1)" src="https://github.com/user-attachments/assets/17a55e74-4d92-41b3-8ad2-3412fd9de056" />
+<img width="1772" alt="Schermata principale di CXF Tools" src="https://github.com/user-attachments/assets/17a55e74-4d92-41b3-8ad2-3412fd9de056" />
 
 *Selezione dei file, scelta dei layer da esportare e modalità di output.*
 
-
-<img width="620" alt="impostazioni-dxf (1)" src="https://github.com/user-attachments/assets/8dc5d603-0329-48be-9b92-10d873316a19" />
-
+<img width="620" alt="Impostazioni dei layer DXF" src="https://github.com/user-attachments/assets/8dc5d603-0329-48be-9b92-10d873316a19" />
 
 *Nomi e colori dei layer DXF, personalizzabili e salvati tra le sessioni.*
 
@@ -52,7 +50,7 @@ Windows 10 o Windows 11 a 64 bit. Nient'altro: Python e le librerie sono già in
 
 ## Installazione
 
-1. Scarica il file `CXF-Tools-2.3.47.msi` dalla [pagina delle release](https://github.com/EspropriTools/CXF-Tools/releases/latest)
+1. [Scarica il pacchetto di installazione](https://github.com/EspropriTools/CXF-Tools/releases/download/v2.3.47/CXF-Tools-2.3.47.msi) (65 MB)
 2. Fai doppio clic sul file scaricato
 3. Accetta le condizioni di licenza e prosegui
 
@@ -88,7 +86,7 @@ La ridistribuzione è consentita a titolo gratuito e a pacchetto inalterato, inc
 
 Le condizioni complete sono riportate nel [contratto di licenza](LICENSE.md), lo stesso testo che viene mostrato e accettato durante l'installazione.
 
-Il software integra librerie open source di terze parti, elencate con le rispettive licenze nel file `LICENSES.txt` incluso nel programma.
+Il software integra librerie open source di terze parti, elencate con le rispettive licenze in [LICENSES.txt](LICENSES.txt).
 
 ## Segnalazioni
 
@@ -102,3 +100,4 @@ Per segnalare un problema o proporre un miglioramento, apri una [issue](https://
 Opera depositata presso il Registro Pubblico Speciale per i Programmi per Elaboratore (SIAE)
 
 </div>
+
