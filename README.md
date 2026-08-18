@@ -26,7 +26,10 @@ CXF Tools legge i file in formato **CXF** dell'Agenzia delle Entrate e li conver
 La conversione avviene **interamente sul tuo computer**. Nessun file viene caricato online, nessuna connessione a Internet è richiesta.
 
 <img width="1772" height="1263" alt="schermata-principale (1)" src="https://github.com/user-attachments/assets/17a55e74-4d92-41b3-8ad2-3412fd9de056" />
+*Selezione dei file, scelta dei layer da esportare e modalità di output.*
 
+<img width="1772" height="1262" alt="impostazioni-dxf" src="https://github.com/user-attachments/assets/93b306f6-5bf0-400e-9971-231599417017" />
+*Nomi e colori dei layer DXF, personalizzabili e salvati tra le sessioni.*
 
 ## Caratteristiche
 
