@@ -6,7 +6,9 @@
 
 Software gratuito per Windows, pensato per geometri, tecnici e uffici tecnici.
 
-[![Scarica](https://img.shields.io/badge/Scarica-CXF%20Tools%202.3.47-2ea44f?style=for-the-badge&logo=windows)](https://github.com/EspropriTools/CXF-Tools/releases/latest)
+[![Scarica](https://img.shields.io/badge/Scarica-CXF%20Tools%202.3.47-2ea44f?style=for-the-badge&logo=windows)](https://github.com/EspropriTools/CXF-Tools/releases/download/v2.3.47/CXF-Tools-2.3.47.msi)
+
+<sub>[Tutte le versioni e le note di rilascio](https://github.com/EspropriTools/CXF-Tools/releases)</sub>
 
 ![Versione](https://img.shields.io/badge/versione-2.3.47-blue)
 ![Licenza](https://img.shields.io/badge/licenza-freeware-lightgrey)
