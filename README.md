@@ -32,7 +32,8 @@ La conversione avviene **interamente sul tuo computer**. Nessun file viene caric
 *Selezione dei file, scelta dei layer da esportare e modalità di output.*
 
 
-<img width="1772" height="1262" alt="impostazioni-dxf" src="https://github.com/user-attachments/assets/93b306f6-5bf0-400e-9971-231599417017" />
+<img width="1168" height="1033" alt="impostazioni-dxf (1)" src="https://github.com/user-attachments/assets/8dc5d603-0329-48be-9b92-10d873316a19" />
+
 
 *Nomi e colori dei layer DXF, personalizzabili e salvati tra le sessioni.*
 
