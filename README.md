@@ -1,93 +1,92 @@
-ESPHome Cover with Piecewise Linear Calibration
-Precise position control for roller shutters and blinds in ESPHome, compensating for the non-linear behavior caused by varying drum diameter.
-The Problem
-Standard `time\_based` covers assume constant speed throughout the travel. In reality, roller shutters wrap around a drum — as more material accumulates, the effective diameter increases, making the shutter move faster per rotation.
-This causes position errors: asking for 50% might give you 40% or 60% depending on direction and starting point.
-The Solution
-This template uses 4-point piecewise linear interpolation to map physical position to actual travel time. You measure real times at 25%, 50%, and 75%, and the code interpolates between these calibration points.
-Calibration values are exposed as Home Assistant number entities, so you can fine-tune without reflashing.
-Features
-Accurate positioning across the entire range
-Separate calibration for open/close directions
-Position restored after reboot
-Intermediate position calculated on stop
-All parameters adjustable from Home Assistant
-Requirements
-ESPHome
-Two relays (or equivalent) for motor control
-Home Assistant (for calibration UI)
-Installation
-Copy `cover-piecewise-linear.yaml` to your ESPHome config
-Define your relay switches with ids `relay\_open` and `relay\_close`
-Customize device name and cover name
-Set initial `total` times (rough estimate is fine)
-Flash and add to Home Assistant
-Calibrate (see below)
-Hardware Setup
-You must define two switches for your relay/motor control. Example:
-```yaml
-switch:
-  - platform: gpio
-    id: relay\_open
-    pin: GPIO12
-    restore\_mode: ALWAYS\_OFF
-    
-  - platform: gpio
-    id: relay\_close
-    pin: GPIO14
-    restore\_mode: ALWAYS\_OFF
+<div align="center">
+
+# CXF Tools
+
+**Converte i file CXF del Catasto in Shapefile e DXF**
+
+Software gratuito per Windows, pensato per geometri, tecnici e uffici tecnici.
+
+[![Scarica](https://img.shields.io/badge/Scarica-CXF%20Tools%202.3.47-2ea44f?style=for-the-badge&logo=windows)](https://github.com/EspropriTools/CXF-Tools/releases/latest)
+
+![Versione](https://img.shields.io/badge/versione-2.3.47-blue)
+![Licenza](https://img.shields.io/badge/licenza-freeware-lightgrey)
+![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6)
+
+</div>
+
+---
+
+## Cosa fa
+
+CXF Tools legge i file in formato **CXF** dell'Agenzia delle Entrate e li converte in due formati utilizzabili nei software tecnici:
+
+- **Shapefile (SHP)** — per QGIS, ArcGIS e i sistemi GIS in generale
+- **DXF** — per AutoCAD, BricsCAD e i CAD compatibili
+
+La conversione avviene **interamente sul tuo computer**. Nessun file viene caricato online, nessuna connessione a Internet è richiesta.
+
+## Caratteristiche
+
+- Conversione di più file in un'unica operazione
+- Scelta dei layer da esportare (particelle, fabbricati, acque, strade, testi, simboli)
+- Colori e proprietà dei layer DXF personalizzabili
+- Esportazione unificata o file separati
+- Simboli grafici catastali resi come blocchi DXF
+- Interfaccia in italiano
+
+## Requisiti
+
+Windows 10 o Windows 11 a 64 bit. Nient'altro: Python e le librerie sono già incluse nel pacchetto.
+
+## Installazione
+
+1. Scarica il file `CXF-Tools-2.3.47.msi` dalla [pagina delle release](https://github.com/EspropriTools/CXF-Tools/releases/latest)
+2. Fai doppio clic sul file scaricato
+3. Accetta le condizioni di licenza e prosegui
+
+L'installazione avviene nella cartella dell'utente e **non richiede diritti di amministratore**.
+
+### Avviso di Windows durante l'installazione
+
+Windows mostrerà un avviso di **SmartScreen** con il messaggio "PC protetto da Windows". Compare perché il pacchetto non è firmato con un certificato commerciale, non perché il software sia dannoso.
+
+Per procedere: clicca su **Ulteriori informazioni**, poi su **Esegui comunque**.
+
+### Installazione silenziosa
+
+Per il deployment su più postazioni:
+
 ```
-Adjust pins and platform according to your hardware (GPIO, PCF8574, MCP23017, etc.).
-Important: If using interlocks, define them in your switch config. The script includes a 125ms delay between direction changes for safety.
-Calibration
-Step 1: Measure Opening Times
-Fully close the cover
-Start a stopwatch
-Press Open in Home Assistant
-Note the seconds when the cover physically reaches:
-25% open
-50% open
-75% open
-100% open (total time)
-Enter these values in the corresponding HA number entities
-Step 2: Measure Closing Times
-Fully open the cover
-Start a stopwatch
-Press Close in Home Assistant
-Note the seconds when the cover physically reaches:
-75% open (= 25% closed)
-50% open (= 50% closed)
-25% open (= 75% closed)
-0% open (= fully closed, total time)
-Enter these values in the corresponding HA number entities
-Tips
-Use a consistent reference point (e.g., window frame marks)
-Measure multiple times and average
-If open/close speeds are identical, you can copy the values
-Adding Multiple Covers
-For each additional cover, duplicate and rename:
-Component	Cover 1	Cover 2	Cover N
-Globals	`c1\_pos`, `c1\_target`, ...	`c2\_pos`, `c2\_target`, ...	`cN\_...`
-Numbers	`c1\_open\_total`, ...	`c2\_open\_total`, ...	`cN\_...`
-Script	`sc1`	`sc2`	`scN`
-Cover	`cover1`	`cover2`	`coverN`
-Relays	`relay\_open`, `relay\_close`	`relay2\_open`, `relay2\_close`	...
-Also add each cover's position restore to `on\_boot`.
-How It Works
-The core is the `p2t()` function (position-to-time), which converts a physical position (0.0–1.0) to a time fraction using linear interpolation across four segments:
+msiexec /i CXF-Tools-2.3.47.msi /qn
 ```
-Position:  0% -------- 25% -------- 50% -------- 75% -------- 100%
-Time:      0 -------- t25 -------- t50 -------- t75 --------  1.0
-```
-When you request a position, the script:
-Determines direction (open/close)
-Loads the appropriate calibration values
-Converts current and target positions to time fractions
-Calculates the required movement duration
-Activates the relay for that duration
-Updates the stored position
-On stop, it calculates the intermediate position based on elapsed time.
-License
-MIT — do whatever you want with it.
-Contributing
-Issues and PRs welcome.
+
+## Verifica dei dati prodotti
+
+> **I dati generati dalle conversioni devono essere sempre verificati.**
+>
+> CXF Tools è uno strumento di ausilio tecnico e non garantisce in alcun caso la correttezza, la completezza o l'accuratezza degli elaborati prodotti. Prima di utilizzare, depositare o consegnare i file convertiti, è necessario controllarne integralmente la correttezza confrontandoli con i file di origine e con le fonti ufficiali.
+>
+> La responsabilità degli elaborati sottoscritti, depositati o consegnati resta interamente in capo al professionista che li produce.
+
+## Licenza
+
+Software distribuito **gratuitamente**. Uso personale, professionale e commerciale consentito, su un numero illimitato di dispositivi.
+
+La ridistribuzione è consentita a titolo gratuito e a pacchetto inalterato, inclusa la copia su risorse di rete interne di enti e studi tecnici. Sono vietati la modifica, la rivendita e ogni cessione a pagamento.
+
+Le condizioni complete sono riportate nel contratto di licenza mostrato durante l'installazione.
+
+Il software integra librerie open source di terze parti, elencate con le rispettive licenze nel file `LICENSES.txt` incluso nel programma.
+
+## Segnalazioni
+
+Per segnalare un problema o proporre un miglioramento, apri una [issue](https://github.com/EspropriTools/CXF-Tools/issues).
+
+---
+
+<div align="center">
+
+© 2026 — Tutti i diritti riservati
+Opera depositata presso il Registro Pubblico Speciale per i Programmi per Elaboratore (SIAE)
+
+</div>
