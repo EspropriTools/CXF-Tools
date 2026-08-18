@@ -85,7 +85,7 @@ Software distribuito **gratuitamente**. Uso personale, professionale e commercia
 
 La ridistribuzione è consentita a titolo gratuito e a pacchetto inalterato, inclusa la copia su risorse di rete interne di enti e studi tecnici. Sono vietati la modifica, la rivendita e ogni cessione a pagamento.
 
-Le condizioni complete sono riportate nel contratto di licenza mostrato durante l'installazione.
+Le condizioni complete sono riportate nel [contratto di licenza](LICENSE.md), lo stesso testo che viene mostrato e accettato durante l'installazione.
 
 Il software integra librerie open source di terze parti, elencate con le rispettive licenze nel file `LICENSES.txt` incluso nel programma.
 
