@@ -25,6 +25,8 @@ CXF Tools legge i file in formato **CXF** dell'Agenzia delle Entrate e li conver
 
 La conversione avviene **interamente sul tuo computer**. Nessun file viene caricato online, nessuna connessione a Internet è richiesta.
 
+<img width="2100" height="1464" alt="schermata-principale" src="https://github.com/user-attachments/assets/1cab9b8c-61ca-4c9f-82ec-1730c8dd2bdb" />
+
 ## Caratteristiche
 
 - Conversione di più file in un'unica operazione
